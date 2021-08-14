@@ -20,11 +20,6 @@ provider discord {
   token = var.discord_token
 }
 
-// data discord_member admin {
-//   server_id = data.discord_server.deezcord_server.id
-//   user_id   = var.admin_user_id
-// }
-
 data discord_server deezcord_server {
   server_id = var.discord_server_id
 }
@@ -149,32 +144,48 @@ resource discord_voice_channel meeting_room {
   category = discord_category_channel.voice_channels.id
 }
 
-// data discord_permission admin {
-//   administrator = "allow"
-// }
+// Roles
+// Import : terraform import discord_role.role_name guild_id:role_id
 
-// resource discord_role admin {
-//   name = "Admin"
-//   server_id = data.discord_server.deezcord_server.id
-//   permissions = data.discord_permission.admin.allow_bits
-//   // color = data.discord_color.blue.dec
-//   hoist = true
-//   mentionable = true
-//   position = 1
-// }
+data discord_permission admin {
+  administrator = "allow"
+}
 
-// resource discord_member_roles admin {
-//   count = var.admin_user_invited ? 1 : 0
-//   user_id = data.discord_member.admin.id
-//   server_id = data.discord_server.deezcord_server.id
-//   role {
-//     role_id = discord_role.admin.id
-//   }
-//   // role {
-//   //     role_id = var.role_id_to_always_remove
-//   //     has_role = false
-//   // }
-// }
+resource discord_role wpm_30 {
+  name = "30wpm"
+  server_id = data.discord_server.deezcord_server.id
+  color = 15277667
+  hoist = true
+  permissions = 104189505
+  // position = 2
+}
+
+resource discord_role wpm_40 {
+  name = "40wpm"
+  server_id = data.discord_server.deezcord_server.id
+  color = 15277667
+  hoist = true
+  permissions = 104189505
+  // position = 2
+}
+
+resource discord_role wpm_50 {
+  name = "50wpm"
+  server_id = data.discord_server.deezcord_server.id
+  color = 15277667
+  hoist = true
+  permissions = 104189505
+  // position = 2
+}
+
+resource discord_role early_adopters {
+  name = "Early Adopters"
+  server_id = data.discord_server.deezcord_server.id
+  color = 15844367
+  hoist = true
+  permissions = 104189505
+  // position = 1
+}
 
 // Invitation link
 
