@@ -133,6 +133,22 @@ resource discord_text_channel random {
   topic = "เรื่องอื่นๆ, นอกเรื่อง, ออกทะเล"
 }
 
+// Channels : Voice
+
+resource discord_voice_channel lounge {
+  name = "Lounge"
+  server_id = data.discord_server.deezcord_server.id
+  position = 9
+  category = discord_category_channel.voice_channels.id
+}
+
+resource discord_voice_channel meeting_room {
+  name = "Meeting Room"
+  server_id = data.discord_server.deezcord_server.id
+  position = 10
+  category = discord_category_channel.voice_channels.id
+}
+
 // data discord_permission admin {
 //   administrator = "allow"
 // }
