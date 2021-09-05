@@ -84,7 +84,7 @@ resource discord_text_channel resources {
 }
 
 resource discord_text_channel introduce {
-  name = "introduce-yourself"
+  name = "introduce"
   server_id = data.discord_server.deezcord_server.id
   position = 5
   sync_perms_with_category = true
@@ -171,6 +171,24 @@ resource discord_role wpm_40 {
 
 resource discord_role wpm_50 {
   name = "50wpm"
+  server_id = data.discord_server.deezcord_server.id
+  color = 15277667
+  hoist = true
+  permissions = 104189505
+  // position = 2
+}
+
+resource discord_role wpm_60 {
+  name = "60wpm"
+  server_id = data.discord_server.deezcord_server.id
+  color = 15277667
+  hoist = true
+  permissions = 104189505
+  // position = 2
+}
+
+resource discord_role wpm_70 {
+  name = "70wpm"
   server_id = data.discord_server.deezcord_server.id
   color = 15277667
   hoist = true
