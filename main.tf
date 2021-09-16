@@ -131,14 +131,14 @@ resource discord_text_channel random {
 // Channels : Voice
 
 resource discord_voice_channel lounge {
-  name = "Lounge"
+  name = "ใตหลสปักิบ"
   server_id = data.discord_server.deezcord_server.id
   position = 9
   category = discord_category_channel.voice_channels.id
 }
 
 resource discord_voice_channel meeting_room {
-  name = "Meeting Room"
+  name = "งเรนมอา่้วื"
   server_id = data.discord_server.deezcord_server.id
   position = 10
   category = discord_category_channel.voice_channels.id
@@ -157,7 +157,7 @@ resource discord_role wpm_30 {
   color = 15277667
   hoist = true
   permissions = 104189505
-  // position = 2
+  position = 3
 }
 
 resource discord_role wpm_40 {
@@ -166,7 +166,7 @@ resource discord_role wpm_40 {
   color = 15277667
   hoist = true
   permissions = 104189505
-  // position = 2
+  position = 4
 }
 
 resource discord_role wpm_50 {
@@ -175,7 +175,7 @@ resource discord_role wpm_50 {
   color = 15277667
   hoist = true
   permissions = 104189505
-  // position = 2
+  position = 5
 }
 
 resource discord_role wpm_60 {
@@ -184,7 +184,7 @@ resource discord_role wpm_60 {
   color = 15277667
   hoist = true
   permissions = 104189505
-  // position = 2
+  position = 6
 }
 
 resource discord_role wpm_70 {
@@ -193,7 +193,16 @@ resource discord_role wpm_70 {
   color = 15277667
   hoist = true
   permissions = 104189505
-  // position = 2
+  position = 7
+}
+
+resource discord_role salim_typer {
+  name = "Salim Typer"
+  server_id = data.discord_server.deezcord_server.id
+  color = 15844367
+  hoist = false
+  permissions = 104189505
+  position = 1
 }
 
 resource discord_role early_adopters {
@@ -202,7 +211,7 @@ resource discord_role early_adopters {
   color = 15844367
   hoist = true
   permissions = 104189505
-  // position = 1
+  position = 2
 }
 
 // Invitation link
