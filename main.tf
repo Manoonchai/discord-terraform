@@ -225,6 +225,24 @@ resource discord_role wpm_70 {
   position = 9
 }
 
+resource discord_role wpm_80 {
+  name = "80wpm"
+  server_id = data.discord_server.deezcord_server.id
+  color = 15277667
+  hoist = true
+  permissions = 104189505
+  position = 10
+}
+
+resource discord_role wpm_90 {
+  name = "90wpm"
+  server_id = data.discord_server.deezcord_server.id
+  color = 15277667
+  hoist = true
+  permissions = 104189505
+  position = 11
+}
+
 resource discord_role salim_typer {
   name = "Salim Typer"
   server_id = data.discord_server.deezcord_server.id
